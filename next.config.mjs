@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['encrypted-tbn0.gstatic.com'],
+        remotePatterns: [
+            { hostname: "encrypted-tbn0.gstatic.com" },
+            { hostname: "lh3.googleusercontent.com" }
+        ]
     },
-    experimental: {
-        serverActions: true
-    }
+    // experimental: {
+    //     serverActions: true
+    // }
 };
 
 export default nextConfig;

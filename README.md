@@ -4,3 +4,4 @@ Need to go back and fix scroll bar for quantity dropdownn button in shopping car
 
 Authentication handled with next-auth.js.org
 
+Add CRON Job to monitor the carts and keep them updated and delete them

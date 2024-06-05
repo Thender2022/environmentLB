@@ -1,21 +1,5 @@
-import { prisma } from "@/lib/db/prisma"
-import { NextAuthOptions } from "next-auth"
-import { PrismaAdapter } from "@auth/prisma-adapter"
-import { Adapter } from "next-auth/adapters"
-import GoogleProvider from "next-auth/providers/google"
-import NextAuth from "next-auth/next"
-import { env } from "@/lib/env"
-
-export const authOptions: NextAuthOptions = {
-    adapter: PrismaAdapter(prisma) as Adapter,
-    providers: [
-        GoogleProvider({
-            clientId: env.GOOGLE_CLIENT_ID,
-            clientSecret: env.GOOGLE_CLIENT_SECRET
-        })
-    ]
-}
+import { authOptions } from '@/app/api/auth/[...nextauth]/options'; // Update the path accordingly
+import NextAuth from 'next-auth';
 
 const handler = NextAuth(authOptions);
-
 export { handler as GET, handler as POST }
