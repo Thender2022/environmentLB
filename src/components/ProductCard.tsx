@@ -13,7 +13,7 @@ export default function ProductCard({product}: ProductCardProps) {
     return (
         <Link 
         href={"/products/" + product.id}
-        className="card w-full bg-base-100 hover:shadow-xl transition-shadow"
+        className="card w-full hover:shadow-xl transition-shadow"
         >
             <figure>
                 <Image 
@@ -24,7 +24,7 @@ export default function ProductCard({product}: ProductCardProps) {
                     className="h-48 object-cover"
                 />
             </figure>
-            <div className="card-body">
+            <div className="card-body card-background">
                 <h2 className="card-title">
                     {product.name}
                     {isNew && <div className="badge badge-secondary">New</div>}

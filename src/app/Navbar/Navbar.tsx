@@ -1,3 +1,5 @@
+"use server"
+
 import Link from "next/link"
 import Image from "next/image"
 import gif from "@/assets/gif.gif"
@@ -8,6 +10,8 @@ import { getServerSession } from "next-auth"
 // import { authOptions } from "../api/auth/[...nextauth]/route"
 import { authOptions } from "@/app/api/auth/[...nextauth]/options"
 import UserMenuButton from "./UserMenuButton"
+import NavLinks from "./Nav"
+
 
 async function searchProducts(formData: FormData) {
     "use server"
@@ -24,14 +28,15 @@ export default async function Navbar() {
     const cart = await getCart();
 
     return (
-        <div className="bg-base-100">
+        <div style={{ backgroundColor: 'black' }} className="bg-base-100">
             <div className="navbar max-w-7xl m-auto flex-col sm:flex-row gap-2">
                <div className="flex-1">
-                <Link href="/" className="btn btn-ghost text-xl normal-case">
+                <Link href="/pages/home" className="btn btn-ghost text-xl normal-case" >
                     <Image src={gif} height={40} width={40} alt="EnviornmentLB Logo" />
-                     EnvironmentLB
+                    <span className="environment-link">EnvironmentLB</span>
                 </Link>
                </div>
+               {/* <NavLinks /> */}
                <div className="flex-none gap-2">
                 <form action={searchProducts}>
                     <div className="form-control">
@@ -42,6 +47,7 @@ export default async function Navbar() {
                         />
                     </div>
                 </form>
+                
                 <ShoppingCartButton cart={cart} />
                 <UserMenuButton session={session} />
                </div>
@@ -49,3 +55,4 @@ export default async function Navbar() {
         </div>
     )
 }
+

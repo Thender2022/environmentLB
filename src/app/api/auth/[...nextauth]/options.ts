@@ -13,6 +13,11 @@ export const authOptions: NextAuthOptions = {
     GoogleProvider({
       clientId: env.GOOGLE_CLIENT_ID,
       clientSecret: env.GOOGLE_CLIENT_SECRET,
+    //   authorization: {
+    //     params: {
+    //       redirect_uri: process.env.NEXTAUTH_URL + '/api/auth/callback/google',
+    //     },
+    //   },
     }),
   ],
   callbacks: {
