@@ -1,26 +1,62 @@
-import "@/app/globals.css"
+import Image from "next/image";
+
+
 
 export default function HomePage() {
-  return(
-    <div>
-      <div className="welcome-card">
-          <h1>The Roots of the Community!</h1>
-      </div>
-      <div className="about-card">
-        <h1>About Us and What we stand for</h1>
-      </div>
-      <div>
-        <h1>Explore the Products available in our gallery!</h1>
-      </div>
-      <div>
-        <h1>Check out our past and future events</h1>
-      </div>
-      <div>
-        <h1>Explore the collective and all of our Artists</h1>
-      </div>
-      <div>
-        <h1>Take a look at the portfolio of the man behind EnvironmentLB</h1>
-      </div>
-    </div>
-  )
+    return (
+        <div className="display-position">
+            <div className="home-intro-box">
+                <div className="intro-display">
+                    <div className="img-intro-box">
+                        <h1>Image Box</h1>
+                    </div>
+                    <h1>This is the intro section</h1>
+                </div>
+            </div>
+
+            {/* Events Container */}
+
+            <div className="home-events-box">
+                <div className="events-display">
+                    <div className="img-events-box">
+                        <h1>Image Box</h1>
+                    </div>
+                    <h1>This is the event Section</h1>
+                </div>
+            </div>
+
+            {/* Gallery Conatiner */}
+
+            <div className="home-gallery-box">
+                <div className="gallery-display">
+                    <div className="img-gallery-box">
+                        <h1>Image Box</h1>
+                    </div>
+                    <h1>This is the gallery Section</h1>
+                </div>
+            </div>
+
+            {/* Collective Cntainer */}
+
+            <div className="home-collective-box">
+                <div className="collective-display">
+                    <div className="img-collective-box">
+                        <h1>Image Box</h1>
+                    </div>
+                    <h1>This is the collective Section</h1>
+                </div>
+            </div>
+
+            {/* Portfolio Cntainer */}
+
+            <div className="home-portfolio-box">
+                <div className="portfolio-display">
+                    <div className="img-portfolio-box">
+                        <h1>Image Box</h1>
+                    </div>
+                    <h1>This is the portfolio Section</h1>
+                </div>
+            </div>
+        </div>
+    )
 }

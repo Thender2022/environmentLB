@@ -50,5 +50,5 @@ export async function setProductQuantity( productId: string, quantity: number) {
         }
     }
     
-    revalidatePath("/cart/");
+    revalidatePath("/shop/cart/");
 }

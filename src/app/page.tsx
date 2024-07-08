@@ -1,29 +1,17 @@
-// import LandingPageLayout from "@/app/pages/landing-page/layout"
-
-import RootLayout from "./layout";
-
-// export default function LandingPage() {
-//     return (
-//       <LandingPageLayout>
-//         <section>
-//           <h1>Welcome to My Landing Page</h1>
-//           <p>This is the landing page content.</p>
-//         </section>
-//       </LandingPageLayout>
-//     );
-//   }
+import Link from 'next/link';
+import Image from 'next/image';
+import gif from '@/assets/gif.gif'; // Ensure this path is correct
 
 
-export default function LandingPage() {
-      
-        <>
+
+function LandingPage() {
+    return (
+        <Link href="/pages/home" className="landing-logo">
+            <Image src={gif} height={600} width={600} alt="EnvironmentLB Logo" />
             
-            <div>
-                <h1>Welcome to the Community</h1>
-                <div>
-                    <a href="/pages/home">Enter</a>
-                </div>
-            </div>
-        </>   
+        </Link>
+    );
 }
+
+export default LandingPage;
 

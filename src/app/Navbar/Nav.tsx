@@ -28,7 +28,7 @@ export default function NavLinks() {
             <div>
                 <li>
                 <Link className={`link ${pathname === '/shop' ? 'active' : ''}`} href="/pages/shop">
-                    Shop
+                    Gallery
                 </Link>
                 </li>
             </div>
@@ -39,13 +39,13 @@ export default function NavLinks() {
                 </Link>
                 </li>
             </div>
-            <div>
+            {/* <div>
                 <li>
                 <Link className={`link ${pathname === '/gallery' ? 'active' : ''}`} href="/pages/gallery">
                     Gallery
                 </Link>
                 </li>
-            </div>
+            </div> */}
             <div>
                 <li>
                 <Link className={`link ${pathname === '/collective' ? 'active' : ''}`} href="/pages/collective">

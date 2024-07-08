@@ -6,6 +6,7 @@ import NavLinks from "./Navbar/Nav";
 import Footer from "./Footer";
 import SessionProvider from "./SessionProvider";
 import "@/app/globals.css"
+import LandingPage from "@/app/page";
 
 
 // import LandingPage from "./page";
@@ -30,6 +31,7 @@ export default function RootLayout({
         <SessionProvider>
           <Navbar />
           <NavLinks />
+          
           <main className="p-4 max-w-7xl m-auto min-w-[300px]">{children}</main>
           {/* <Footer /> */}
         </SessionProvider>

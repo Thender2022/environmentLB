@@ -31,7 +31,7 @@ async function addProduct(formData: FormData) {
         data: {name, description, imageUrl, price},
     });
 
-    redirect("/")
+    redirect("/pages/home")
 }
 
 export default async function AddProductPage() {
